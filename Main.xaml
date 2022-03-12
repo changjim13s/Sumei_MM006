@@ -77,7 +77,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="773.6,720" sap2010:WorkflowViewState.IdRef="Flowchart_2">
@@ -184,7 +183,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">240,394</av:Point>
                       <av:Size x:Key="ShapeSize">200,52</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">440,420 480,420 480,474</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">440,420 470,420 470,464</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PROCESS_DATA_MIGO workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="PROCESS_DATA_MIGO.xaml">
@@ -203,9 +202,9 @@
                     <FlowStep x:Name="__ReferenceID2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">380,474</av:Point>
+                          <av:Point x:Key="ShapeLocation">370,464</av:Point>
                           <av:Size x:Key="ShapeSize">200,52</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">480,526 480,534</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">470,516 470,534 480,534</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke EnvironmentCheck workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="EnvironmentCheck.xaml">
@@ -242,24 +241,12 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SAPLOGIN workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="SAPLOGIN.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="CONNT_NAME">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CONNT_NAME" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="CLIENT">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CLIENT" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="ID">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ID" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="PASSWORD">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PASSWORD" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="LANGU">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="langu" />
-                              </InArgument>
-                              <OutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">
-                                <mva:VisualBasicReference x:TypeArguments="ui:Window" ExpressionText="SAP_WIND" />
-                              </OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="CONNT_NAME">[CONNT_NAME]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="CLIENT">[CLIENT]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="ID">[ID]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="PASSWORD">[PASSWORD]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="LANGU">[langu]</InArgument>
+                              <OutArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">[SAP_WIND]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -275,38 +262,18 @@
                                   <av:Size x:Key="ShapeSize">200,52</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RPA_to_MIGO" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="RPA_to_MIGO.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RPA_to_MIGO" sap:VirtualizedContainerService.HintSize="333.6,112.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="RPA_to_MIGO.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_DATA">
-                                    <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="GT_DATA" />
-                                  </InOutArgument>
-                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_HEAD">
-                                    <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="GT_HEAD" />
-                                  </InOutArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="ID">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ID" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="CLIENT">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CLIENT" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="CONNT_NAME">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CONNT_NAME" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="PASSWORD">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="PASSWORD" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="LANGU">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="langu" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="DB_NAME">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DB_NAME" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="TABLE_NAME">
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TABLE_NAME" />
-                                  </InArgument>
-                                  <InArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">
-                                    <mva:VisualBasicValue x:TypeArguments="ui:Window" ExpressionText="SAP_WIND" />
-                                  </InArgument>
+                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_DATA">[GT_DATA]</InOutArgument>
+                                  <InOutArgument x:TypeArguments="sd:DataTable" x:Key="GT_HEAD">[GT_HEAD]</InOutArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="ID">[ID]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="CLIENT">[CLIENT]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="CONNT_NAME">[CONNT_NAME]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="PASSWORD">[PASSWORD]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="LANGU">[langu]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="DB_NAME">[DB_NAME]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="TABLE_NAME">[TABLE_NAME]</InArgument>
+                                  <InArgument x:TypeArguments="ui:Window" x:Key="SAP_WIND">[SAP_WIND]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
