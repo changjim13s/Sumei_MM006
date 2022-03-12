@@ -1,0 +1,147 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PROCESS_DATA" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1203,1019" sap2010:WorkflowViewState.IdRef="PROCESS_DATA_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="62">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PROCESS_DATA" sap:VirtualizedContainerService.HintSize="678,1641" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="GT_HEAD" />
+      <Variable x:TypeArguments="sd:DataTable" Name="GT_ITEMS" />
+      <Variable x:TypeArguments="sd:DataTable" Name="LT_DATA" />
+      <Variable x:TypeArguments="x:String" Name="OUT_TABLE" />
+      <Variable x:TypeArguments="sd:DataTable" Name="LT_DATA2" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[LT_DATA]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="636,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;EBELN&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;EBELP&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;5&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;ERFMG&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;17&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MEINS&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;3&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;BUDAT&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;8&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;BPMDOC2&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;25&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;MBLNR&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;UPDATE_FLAG&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;1&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;EBELN&gt;430000029&lt;/EBELN&gt;&#xD;&#xA;    &lt;EBELP&gt;20&lt;/EBELP&gt;&#xD;&#xA;    &lt;ERFMG&gt;100&lt;/ERFMG&gt;&#xD;&#xA;    &lt;MEINS&gt;KG&lt;/MEINS&gt;&#xD;&#xA;    &lt;BUDAT&gt;20211218&lt;/BUDAT&gt;&#xD;&#xA;    &lt;BPMDOC2&gt;111111111&lt;/BPMDOC2&gt;&#xD;&#xA;    &lt;MBLNR&gt;PAL100&lt;/MBLNR&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;EBELN&gt;430000029&lt;/EBELN&gt;&#xD;&#xA;    &lt;EBELP&gt;30&lt;/EBELP&gt;&#xD;&#xA;    &lt;ERFMG&gt;200&lt;/ERFMG&gt;&#xD;&#xA;    &lt;MEINS&gt;KG&lt;/MEINS&gt;&#xD;&#xA;    &lt;BUDAT&gt;20211218&lt;/BUDAT&gt;&#xD;&#xA;    &lt;BPMDOC2&gt;111111111&lt;/BPMDOC2&gt;&#xD;&#xA;    &lt;MBLNR&gt;PAL200&lt;/MBLNR&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;EBELN&gt;430000030&lt;/EBELN&gt;&#xD;&#xA;    &lt;EBELP&gt;10&lt;/EBELP&gt;&#xD;&#xA;    &lt;ERFMG&gt;100&lt;/ERFMG&gt;&#xD;&#xA;    &lt;MEINS&gt;KG&lt;/MEINS&gt;&#xD;&#xA;    &lt;BUDAT&gt;20211219&lt;/BUDAT&gt;&#xD;&#xA;    &lt;BPMDOC2&gt;111111112&lt;/BPMDOC2&gt;&#xD;&#xA;    &lt;MBLNR&gt;MM100&lt;/MBLNR&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;EBELN&gt;430000030&lt;/EBELN&gt;&#xD;&#xA;    &lt;EBELP&gt;20&lt;/EBELP&gt;&#xD;&#xA;    &lt;ERFMG&gt;200&lt;/ERFMG&gt;&#xD;&#xA;    &lt;MEINS&gt;KG&lt;/MEINS&gt;&#xD;&#xA;    &lt;BUDAT&gt;20211219&lt;/BUDAT&gt;&#xD;&#xA;    &lt;BPMDOC2&gt;111111112&lt;/BPMDOC2&gt;&#xD;&#xA;    &lt;MBLNR&gt;MM200&lt;/MBLNR&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;  &lt;TableName&gt;&#xD;&#xA;    &lt;EBELN&gt;430000029&lt;/EBELN&gt;&#xD;&#xA;    &lt;EBELP&gt;10&lt;/EBELP&gt;&#xD;&#xA;    &lt;ERFMG&gt;10&lt;/ERFMG&gt;&#xD;&#xA;    &lt;MEINS&gt;KG&lt;/MEINS&gt;&#xD;&#xA;    &lt;BUDAT&gt;20211218&lt;/BUDAT&gt;&#xD;&#xA;    &lt;BPMDOC2&gt;111111111&lt;/BPMDOC2&gt;&#xD;&#xA;    &lt;MBLNR&gt;PAA50&lt;/MBLNR&gt;&#xD;&#xA;  &lt;/TableName&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:FilterDataTable DataTable="[LT_DATA]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="636,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[GT_HEAD]" SelectColumnsMode="Keep">
+      <ui:FilterDataTable.Filters>
+        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+          <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="NOTEQ" />
+        </scg:List>
+      </ui:FilterDataTable.Filters>
+      <ui:FilterDataTable.SelectColumns>
+        <scg:List x:TypeArguments="InArgument" Capacity="4">
+          <InArgument x:TypeArguments="x:String">["BPMDOC2"]</InArgument>
+        </scg:List>
+      </ui:FilterDataTable.SelectColumns>
+    </ui:FilterDataTable>
+    <ui:RemoveDuplicateRows DataTable="[GT_HEAD]" DisplayName="Remove Duplicate Rows" sap:VirtualizedContainerService.HintSize="636,79" sap2010:WorkflowViewState.IdRef="RemoveDuplicateRows_2" OutputDataTable="[GT_HEAD]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[GT_HEAD]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="636,911" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="WA_HEAD" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="602,791" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[LT_DATA]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,575" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="WA_ITEMS" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,455" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[WA_HEAD(0).ToString = WA_ITEMS(5).ToString]" sap:VirtualizedContainerService.HintSize="484,363" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[WA_ITEMS(5).ToString+CHR(10)+WA_ITEMS(0).ToString+CHR(10)+WA_ITEMS(1).ToString+CHR(10)+WA_ITEMS(6).ToString]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="560,84" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;結束&quot; +WA_HEAD(0).ToString]" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <ui:OutputDataTable DataTable="[GT_HEAD]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="636,79" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[OUT_TABLE]" />
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="636,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[OUT_TABLE]" />
+  </Sequence>
+</Activity>

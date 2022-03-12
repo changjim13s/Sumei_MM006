@@ -1,0 +1,331 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="MIGO" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="819.2,355.2" sap2010:WorkflowViewState.IdRef="MIGO_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="MIGO" sap:VirtualizedContainerService.HintSize="241.6,160" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="416.8,2640" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'ComboBox  交易/事件'" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="收貨">
+        <ui:SelectItem.Items>
+          <scg:List x:TypeArguments="x:String" Capacity="16">
+            <x:String>收貨</x:String>
+            <x:String>取消</x:String>
+            <x:String>入庫</x:String>
+            <x:String>出庫</x:String>
+            <x:String>後續交貨</x:String>
+            <x:String>後續調整</x:String>
+            <x:String>更改</x:String>
+            <x:String>核發 GR 凍結庫存</x:String>
+            <x:String>發貨</x:String>
+            <x:String>轉帳</x:String>
+            <x:String>退貨</x:String>
+            <x:String>顯示</x:String>
+          </scg:List>
+        </ui:SelectItem.Items>
+        <ui:SelectItem.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b469e803-9e65-4172-a05c-73e5c79a8458" InformativeScreenshot="58ad7b81d85890ab2b3683cc0f7d2d2b" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/1/cmb[0]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:SelectItem.Target>
+      </ui:SelectItem>
+      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'ComboBox  參考文件'" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="採購單">
+        <ui:SelectItem.Items>
+          <scg:List x:TypeArguments="x:String" Capacity="16">
+            <x:String>其他</x:String>
+            <x:String>採購單</x:String>
+            <x:String>物料文件</x:String>
+            <x:String>訂單</x:String>
+            <x:String>進項交貨</x:String>
+            <x:String>運輸</x:String>
+            <x:String>運輸 ID 代碼</x:String>
+            <x:String>銷項交貨</x:String>
+            <x:String>預留</x:String>
+          </scg:List>
+        </ui:SelectItem.Items>
+        <ui:SelectItem.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f905137-95eb-4d22-b515-82ddf706eeee" InformativeScreenshot="2264fbdc040bba7148d43c6cee40a525" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/1/cmb[1]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:SelectItem.Target>
+      </ui:SelectItem>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  採購單'" EmptyField="True" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="4300000005">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a1700fca-27de-4dde-a1d3-1ad0afe3e5a9" InformativeScreenshot="cc7b52b0169e4dc8e37f8bfb2b9899e3" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/1/sub/1/1/1/ctxt' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  採購單項目號碼'" EmptyField="True" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="10">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ffe555b2-526f-439f-8a30-391126067703" InformativeScreenshot="b537a8d96193675724388cd76eefa106" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/1/sub/1/1/1/txt' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  執行'" sap:VirtualizedContainerService.HintSize="375.2,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition OffsetX="6" OffsetY="7" Position="TopLeft" />
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="129f3f4c-dcd8-414d-afab-b51e33091294" InformativeScreenshot="e53c69de542e032c5c9dfe73ca57f3a5" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/1/sub/1/1/1/btn[0]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Tab  數量'" sap:VirtualizedContainerService.HintSize="375.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition OffsetX="29" OffsetY="15" Position="TopLeft" />
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e277928b-8815-423b-9feb-2e2531cdbade" InformativeScreenshot="552069cff21774b9293c5f85e96972e5" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 4300000005 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/4/sub/1/4/1/tabsTS_GOITEM/tabpOK_GOITEM_QUANTITIES' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  登錄之單位數量'" EmptyField="True" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="1">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5238f331-5f2d-4cac-969f-5585910564a7" InformativeScreenshot="d2de2137941ba2d3a9b574fb162213a8" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 4300000005 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/4/sub/1/4/1/tabsTS_GOITEM/tabpOK_GOITEM_QUANTITIES/ssub/1/4/1/1/30/txt[0]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  登錄之單位數量'" EmptyField="True" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="個">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ad54321e-46e8-4984-b87c-c65885654695" InformativeScreenshot="ff48c0c8792907b58c4eb1fb508f4500" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 4300000005 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/4/sub/1/4/1/tabsTS_GOITEM/tabpOK_GOITEM_QUANTITIES/ssub/1/4/1/1/30/ctxt[0]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'TextField  表頭內文'" EmptyField="True" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="TEST1234">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="900c79a6-903a-4f84-b2f5-ce3292f1ab86" InformativeScreenshot="a598136b52295cfaf68be0d108e81329" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 4300000005 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/2/sub/1/2/1/tabsTS_GOHEAD/tabpOK_GOHEAD_GENERAL/ssub/1/2/1/1/2/txt[3]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField  過帳日期'" EmptyField="True" sap:VirtualizedContainerService.HintSize="375.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="False" Text="20211221">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="20650a1b-8e4e-4994-9842-a1f969625aaf" InformativeScreenshot="798e9a53e950ba4e6d70e37527617134" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 4300000005 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/2/sub/1/2/1/tabsTS_GOHEAD/tabpOK_GOHEAD_GENERAL/ssub/1/2/1/1/2/ctxt[1]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'CheckBox  項目確定'" sap:VirtualizedContainerService.HintSize="375.2,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition OffsetX="6" OffsetY="10" Position="TopLeft" />
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="27dbeb03-afb1-45e1-aa56-246da08d7a94" InformativeScreenshot="399cf95d2839a27b9fba9e6c5986f035" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 4300000005 - ABAP2' /&gt;&lt;sap id='usr/ssub/1/sub/1/4/sub/1/4/1/sub/1/4/1/33/chk' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  過帳 (Ctrl+S)'" sap:VirtualizedContainerService.HintSize="375.2,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+        <ui:Click.CursorPosition>
+          <ui:CursorPosition OffsetX="10" OffsetY="13" Position="TopLeft" />
+        </ui:Click.CursorPosition>
+        <ui:Click.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d786171b-7120-4178-a703-0b418cf5fcdf" InformativeScreenshot="fd3160904edd23ae45122888ccde4625" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 4300000005 - ABAP2' /&gt;&lt;sap id='tbar[0]/btn[11]' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:Click.Target>
+      </ui:Click>
+      <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="375.2,556.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="MBLNR" />
+          <Variable x:TypeArguments="scg:IEnumerable(ui:TextInfo)" Name="MB2" />
+          <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="RESULT" />
+          <Variable x:TypeArguments="x:String" Name="TEXT2" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Statusbar 物料文件'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition OffsetX="33" OffsetY="22" Position="TopLeft" />
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="431720b0-7ece-4c35-b1ab-9294f6f3fa94" InformativeScreenshot="e7d932cf91560f6958a1e9e38e01afd3" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='sbar' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:Click.Target>
+        </ui:Click>
+        <ui:GetOCRText DisplayName="Get OCR Text 'Statusbar 物料文件'" sap:VirtualizedContainerService.HintSize="333.6,169.6" sap2010:WorkflowViewState.IdRef="GetOCRText_1" WordsInfo="[MB2]">
+          <ui:GetOCRText.OCREngine>
+            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+              <ActivityFunc.Argument>
+                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+              </ActivityFunc.Argument>
+              <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="auto" Profile="Screen" Result="[RESULT]" Scale="1" Text="[TEXT2]" Timeout="1000" />
+            </ActivityFunc>
+          </ui:GetOCRText.OCREngine>
+          <ui:GetOCRText.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4378c27a-050d-4720-a7a0-d4396ca54c9b" InformativeScreenshot="6fd8205e8bc3946877fb6adf625283d8" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='sbar' /&gt;">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+              <ui:Target.WaitForReady>
+                <InArgument x:TypeArguments="ui:WaitForReady" />
+              </ui:Target.WaitForReady>
+            </ui:Target>
+          </ui:GetOCRText.Target>
+          <ui:GetOCRText.Text>
+            <OutArgument x:TypeArguments="x:String">[MBLNR]</OutArgument>
+          </ui:GetOCRText.Text>
+        </ui:GetOCRText>
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'H3'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+          <ui:Click.CursorPosition>
+            <ui:CursorPosition OffsetX="150" OffsetY="-1" Position="TopLeft" />
+          </ui:Click.CursorPosition>
+          <ui:Click.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7237b3ac-7bf0-4d6e-bb0a-5bee96fafad0" InformativeScreenshot="0dca33b5ebcb552d216098e078fd4fa6" Selector="&lt;html app='saplogon.exe' title='MIGO012' /&gt;&lt;webctrl tag='H3' /&gt;" WaitForReady="COMPLETE">
+              <ui:Target.TimeoutMS>
+                <InArgument x:TypeArguments="x:Int32" />
+              </ui:Target.TimeoutMS>
+            </ui:Target>
+          </ui:Click.Target>
+        </ui:Click>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>

@@ -1,0 +1,227 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="testdb" this:testdb.processerror="[Nothing]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="gt_data" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="DB_NAME" Type="InOutArgument(x:String)" />
+    <x:Property Name="TABLE_NAME" Type="InOutArgument(x:String)" />
+    <x:Property Name="GV_ERROR" Type="InOutArgument(s:Exception)" />
+    <x:Property Name="User_ID" Type="InOutArgument(x:String)" />
+    <x:Property Name="password_db" Type="InOutArgument(x:String)" />
+    <x:Property Name="DATA_SOURCE" Type="InArgument(x:String)" />
+    <x:Property Name="CLIENT" Type="InArgument(x:String)" />
+    <x:Property Name="processerror" Type="InArgument(s:Exception)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>813.6,611.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>testdb_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="39">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="testdb" sap:VirtualizedContainerService.HintSize="478.4,387.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbconn" />
+      <Variable x:TypeArguments="x:String" Default="[&quot;Data Source=&quot;+DATA_SOURCE+&quot;;Initial Catalog=&quot;+DB_NAME+&quot;;Persist Security Info=True;User ID=&quot;+User_ID+&quot;;Password=&quot;+password_db+&quot;&quot;]" Name="conn_str" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt" />
+      <Variable x:TypeArguments="x:Int32" Name="dt_ind" />
+      <Variable x:TypeArguments="sd:DataTable" Name="testdb" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,294.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="連接DB抓取資料" sap:VirtualizedContainerService.HintSize="724,905.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:DatabaseConnect DisplayName="Connect" sap:VirtualizedContainerService.HintSize="682.4,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="[conn_str]" DatabaseConnection="[dbconn]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:DatabaseConnect>
+          <If Condition="[IsNothing(DBCONN)]" sap:VirtualizedContainerService.HintSize="682.4,720.8" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="263.2,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:Exception">[processerror]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:Exception">[NEW SystemException("DB連線失敗")]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="375.2,562.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[GT_DATA]" DisplayName="Execute Query" ExistingDbConnection="[dbconn]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[&quot;SELECT TOP (100)  * FROM [&quot;+DB_NAME.ToString+&quot;].[dbo].[&quot;+TABLE_NAME.ToString+&quot;]   where  MANDT = '&quot;+CLIENT+&quot;' AND ( mblnr = '' or mblnr is null )   &quot;]" TimeoutMS="2000">
+                  <ui:ExecuteQuery.Parameters>
+                    <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                  </ui:ExecuteQuery.Parameters>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ExecuteQuery>
+                <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="MANDT" DataTable="[gt_data]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="333.6,185.6" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+                <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="BPMDOC2" DataTable="[gt_data]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="333.6,52" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[gt_data]" SortOrder="Ascending">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:SortDataTable>
+                <ui:DatabaseDisconnect DatabaseConnection="[dbconn]" DisplayName="Disconnect" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,21.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Assign sap:VirtualizedContainerService.HintSize="263.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:Exception">[processerror]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:Exception">[exception]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <If Condition="[processerror is Nothing]" sap:VirtualizedContainerService.HintSize="620.8,412.8" sap2010:WorkflowViewState.IdRef="If_1">
+          <If.Then>
+            <Sequence sap:VirtualizedContainerService.HintSize="272,154.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230.4,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="DB連線成功" />
+            </Sequence>
+          </If.Then>
+          <If.Else>
+            <Sequence sap:VirtualizedContainerService.HintSize="304.8,254.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="263.2,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="faild" />
+              <Assign sap:VirtualizedContainerService.HintSize="263.2,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:Exception">[GV_ERROR]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:Exception">[processerror]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </If.Else>
+        </If>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
