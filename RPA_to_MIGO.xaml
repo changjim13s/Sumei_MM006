@@ -14,7 +14,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1019.2,7244.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>834.4,1183.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>test_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -93,7 +93,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="1029.6,7180" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="844.8,1118.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt" />
       <Variable x:TypeArguments="x:Int32" Name="indx" />
@@ -109,26 +109,26 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[GT_HEAD]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="988,6940" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[GT_HEAD]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="803.2,878.4" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="wa_head" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="954.4,6820" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="769.6,758.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="912.8,6727.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="728,665.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="s:Exception" Default="[Nothing]" Name="gv_error" />
                 <Variable x:TypeArguments="x:String" Name="mb3" />
               </TryCatch.Variables>
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="876,6500" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <Sequence sap:VirtualizedContainerService.HintSize="876,6504" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="MSG_TYPE" />
                     <Variable x:TypeArguments="x:String" Name="MSG_TEXT" />
@@ -215,7 +215,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:SelectItem>
-                  <Sequence DisplayName="點開表頭" sap:VirtualizedContainerService.HintSize="450.4,67.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <Sequence DisplayName="點開表頭" sap:VirtualizedContainerService.HintSize="834.4,67.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="ui:UiElement" Name="ok_btn" />
                     </Sequence.Variables>
@@ -279,7 +279,7 @@
                       </If.Else>
                     </If>
                   </Sequence>
-                  <Sequence DisplayName="點開項目" sap:VirtualizedContainerService.HintSize="450.4,67.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <Sequence DisplayName="點開項目" sap:VirtualizedContainerService.HintSize="834.4,67.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="ui:UiElement" Name="ok_btn" />
                     </Sequence.Variables>
@@ -343,7 +343,7 @@
                       </If.Else>
                     </If>
                   </Sequence>
-                  <Assign sap:VirtualizedContainerService.HintSize="665.6,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                  <Assign sap:VirtualizedContainerService.HintSize="834.4,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                     <Assign.To>
                       <OutArgument x:TypeArguments="sd:DataTable">[LT_ITEMS]</OutArgument>
                     </Assign.To>
@@ -371,7 +371,7 @@
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'CTextField  採購單'" EmptyField="True" sap:VirtualizedContainerService.HintSize="548.8,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_36" SendWindowMessages="False" SimulateType="True" Text="[wa(0).ToString]">
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'CTextField  採購單'" EmptyField="True" sap:VirtualizedContainerService.HintSize="717.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_36" SendWindowMessages="False" SimulateType="True" Text="[wa(0).ToString]">
                               <ui:TypeInto.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07cc349c-9df4-44b4-883b-ba163bd802d5" InformativeScreenshot="9db1ff773bdcbb53ca6ab1eaced505d3" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='收貨 採購單 - RPA01' /&gt;&lt;sap id='usr/ssubSUB_MAIN_CARRIER:SAPLMIGO:*/subSUB_FIRSTLINE:SAPLMIGO:0011/subSUB_FIRSTLINE_REFDOC:SAPLMIGO:2000/ctxtGODYNPRO-PO_NUMBER' /&gt;" TimeoutMS="1000">
                                   <ui:Target.WaitForReady>
@@ -386,7 +386,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:TypeInto>
-                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'TextField  採購單項目號碼'" EmptyField="True" sap:VirtualizedContainerService.HintSize="548.8,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_37" SendWindowMessages="False" SimulateType="True" Text="[wa(1).ToString]">
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="Type Into 'TextField  採購單項目號碼'" EmptyField="True" sap:VirtualizedContainerService.HintSize="717.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_37" SendWindowMessages="False" SimulateType="True" Text="[wa(1).ToString]">
                               <ui:TypeInto.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3e94788-b2d4-4bdb-bd7e-f9ed26255666" InformativeScreenshot="b7ceed16133b54be7c4f21d89ab39fb2" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='收貨 採購單 - RPA01' /&gt;&lt;sap id='usr/ssubSUB_MAIN_CARRIER:SAPLMIGO:*/subSUB_FIRSTLINE:SAPLMIGO:0011/subSUB_FIRSTLINE_REFDOC:SAPLMIGO:2000/txtGODYNPRO-PO_ITEM' /&gt;" TimeoutMS="1000">
                                   <ui:Target.WaitForReady>
@@ -443,7 +443,7 @@
                                           <OutArgument x:TypeArguments="x:String">[MSG_TEXT]</OutArgument>
                                         </ui:AssignOperation.To>
                                         <ui:AssignOperation.Value>
-                                          <InArgument x:TypeArguments="x:String">採購單不存在</InArgument>
+                                          <InArgument x:TypeArguments="x:String">單號不存在</InArgument>
                                         </ui:AssignOperation.Value>
                                       </ui:AssignOperation>
                                     </scg:List>
@@ -650,7 +650,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEachRow>
-                  <If Condition="[MSG_TYPE &lt;&gt; &quot;E&quot;]" sap:VirtualizedContainerService.HintSize="834.4,424.8" sap2010:WorkflowViewState.IdRef="If_8">
+                  <If Condition="[MSG_TYPE &lt;&gt; &quot;E&quot;]" sap:VirtualizedContainerService.HintSize="834.4,332.8" sap2010:WorkflowViewState.IdRef="If_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -658,7 +658,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="241.6,236.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <Sequence sap:VirtualizedContainerService.HintSize="241.6,144.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -679,37 +679,37 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:SendHotkey>
-                        <ucas:ReadStatusbar MessageId="{x:Null}" MessageNumber="{x:Null}" ContinueOnError="True" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageData="[MSG_DATA]" MessageText="[MSG_TEXT]" MessageType="[MSG_TYPE]">
-                          <ucas:ReadStatusbar.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f59d32e-8d0b-4188-8008-142720988fe5" InformativeScreenshot="52418a73eb959d360449d117578f257a" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='sbar' /&gt;" TimeoutMS="2000">
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ucas:ReadStatusbar.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ucas:ReadStatusbar>
                       </Sequence>
                     </If.Then>
                   </If>
-                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="834.4,2756" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                  <ucas:ReadStatusbar MessageId="{x:Null}" MessageNumber="{x:Null}" ContinueOnError="True" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="834.4,52" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageData="[MSG_DATA]" MessageText="[MSG_TEXT]" MessageType="[MSG_TYPE]">
+                    <ucas:ReadStatusbar.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f59d32e-8d0b-4188-8008-142720988fe5" InformativeScreenshot="52418a73eb959d360449d117578f257a" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' omit:title='收貨 採購單 - ABAP2' /&gt;&lt;sap id='sbar' /&gt;" TimeoutMS="2000">
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ucas:ReadStatusbar.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ucas:ReadStatusbar>
+                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="834.4,2760" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                     <ui:IfElseIf.ConditionBlocks>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                         <ui:IfElseIfBlock BlockType="If" Condition="[MSG_TYPE = &quot;S&quot;]">
                           <ui:IfElseIfBlock.Then>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="478.4,672" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="475.2,676" sap2010:WorkflowViewState.IdRef="Sequence_18">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,287.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,291.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                 <TryCatch.Try>
                                   <Assign sap:VirtualizedContainerService.HintSize="263.2,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                                     <Assign.To>
@@ -721,10 +721,10 @@
                                   </Assign>
                                 </TryCatch.Try>
                                 <TryCatch.Catches>
-                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,21.6" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,129.6" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
@@ -744,7 +744,7 @@
                                   </Catch>
                                 </TryCatch.Catches>
                               </TryCatch>
-                              <ui:DatabaseConnect DisplayName="Connect" sap:VirtualizedContainerService.HintSize="436.8,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="[conn_str]" DatabaseConnection="[dbconn]">
+                              <ui:DatabaseConnect DisplayName="Connect" sap:VirtualizedContainerService.HintSize="433.6,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="[conn_str]" DatabaseConnection="[dbconn]">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -925,7 +925,7 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="495.2,21.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="694.4,21.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -936,7 +936,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap:VirtualizedContainerService.HintSize="304.8,150.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence sap:VirtualizedContainerService.HintSize="304.8,152.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -974,7 +974,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,61.6" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[&quot;failed:&quot;+gv_error.ToString]" />
-                      <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:05" Caption="錯誤" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;failed:&quot;+gv_error.ToString]" />
+                      <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" Caption="錯誤" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;failed&quot;]" />
                     </Sequence>
                   </If.Else>
                 </If>
@@ -984,7 +984,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:CloseApplication ContinueOnError="True" DisplayName="Close Application 'Menubar  mbar'" sap:VirtualizedContainerService.HintSize="604,107.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+    <ui:CloseApplication ContinueOnError="True" DisplayName="Close Application 'Menubar  mbar'" sap:VirtualizedContainerService.HintSize="803.2,107.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
       <ui:CloseApplication.Target>
         <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[SAP_WIND]" Id="987019cc-820f-4b3a-8e49-e6ea628a54c8" InformativeScreenshot="45da3674a90a03fdb65ef4c6c0d7711c" TimeoutMS="2000">
           <ui:Target.WaitForReady>
