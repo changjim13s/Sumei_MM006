@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>811.2,611.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1071,555</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>testdb_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -92,7 +92,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="testdb" sap:VirtualizedContainerService.HintSize="478.4,387.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="testdb" sap:VirtualizedContainerService.HintSize="480,385" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="dbconn" />
       <Variable x:TypeArguments="x:String" Default="[&quot;Data Source=&quot;+DATA_SOURCE+&quot;;Initial Catalog=&quot;+DB_NAME+&quot;;Persist Security Info=True;User ID=&quot;+User_ID+&quot;;Password=&quot;+password_db+&quot;&quot;]" Name="conn_str" />
@@ -106,16 +106,16 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,294.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,293" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="連接DB抓取資料" sap:VirtualizedContainerService.HintSize="724,905.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="連接DB抓取資料" sap:VirtualizedContainerService.HintSize="726,900" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:DatabaseConnect DisplayName="Connect" sap:VirtualizedContainerService.HintSize="682.4,52" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="[conn_str]" DatabaseConnection="[dbconn]">
+          <ui:DatabaseConnect DisplayName="Connect" sap:VirtualizedContainerService.HintSize="684,51" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.SqlClient" ConnectionString="[conn_str]" DatabaseConnection="[dbconn]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -123,9 +123,9 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:DatabaseConnect>
-          <If Condition="[IsNothing(DBCONN)]" sap:VirtualizedContainerService.HintSize="682.4,720.8" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[IsNothing(DBCONN)]" sap:VirtualizedContainerService.HintSize="684,717" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Assign sap:VirtualizedContainerService.HintSize="263.2,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign sap:VirtualizedContainerService.HintSize="263,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:Exception">[processerror]</OutArgument>
                 </Assign.To>
@@ -135,13 +135,13 @@
               </Assign>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="375.2,562.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,559" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[GT_DATA]" DisplayName="Execute Query" ExistingDbConnection="[dbconn]" sap:VirtualizedContainerService.HintSize="333.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[&quot;SELECT TOP (100)  * FROM [&quot;+DB_NAME.ToString+&quot;].[dbo].[&quot;+TABLE_NAME.ToString+&quot;]   where  MANDT = '&quot;+CLIENT+&quot;' AND  (MBLNR = '' OR MBLNR IS NULL )  &quot;]" TimeoutMS="2000">
+                <ui:ExecuteQuery ContinueOnError="{x:Null}" CommandType="Text" DataTable="[GT_DATA]" DisplayName="Execute Query" ExistingDbConnection="[dbconn]" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="[&quot;SELECT TOP (100)  * FROM [&quot;+DB_NAME.ToString+&quot;].[dbo].[&quot;+TABLE_NAME.ToString+&quot;]   where  MANDT = '&quot;+CLIENT+&quot;' AND ( MBLNR = '' OR MBLNR IS NULL ) &quot;]" TimeoutMS="2000">
                   <ui:ExecuteQuery.Parameters>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:ExecuteQuery.Parameters>
@@ -152,7 +152,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:ExecuteQuery>
-                <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="MANDT" DataTable="[gt_data]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="333.6,185.6" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+                <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="MANDT" DataTable="[gt_data]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
                 <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="BPMDOC2" DataTable="[gt_data]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="333.6,52" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[gt_data]" SortOrder="Ascending">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -168,7 +168,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,21.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -179,7 +179,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Assign sap:VirtualizedContainerService.HintSize="263.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="263,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:Exception">[processerror]</OutArgument>
               </Assign.To>
