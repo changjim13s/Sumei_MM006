@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1097,784</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1051,784</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -77,6 +77,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="774,719" sap2010:WorkflowViewState.IdRef="Flowchart_2">
@@ -108,7 +109,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID5">
       <sap:WorkflowViewStateService.ViewState>
@@ -157,24 +158,42 @@
                   <av:PointCollection x:Key="FalseConnector">185.2,330 340,330 340,394</av:PointCollection>
                   <x:String x:Key="FalseLabel">"有資料"</x:String>
                   <x:String x:Key="TrueLabel">"無資料"</x:String>
-                  <av:PointCollection x:Key="TrueConnector">114.8,330 110,330 110,514</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">114.8,329.9 86.5,329.9 86.5,382.76 116.5,382.76 116.5,412.76</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowStep x:Name="__ReferenceID4">
+                <FlowStep x:Name="__ReferenceID10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">10,514</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:Point x:Key="ShapeLocation">0,412.76</av:Point>
+                      <av:Size x:Key="ShapeSize">233,61</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">116.5,473.76 116.5,503.76 110,503.76 110,514</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" Caption="程式結束" DisplayName="無資料" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;無符合條件資料&quot;+vbCrLf+&quot;CLIENT：&quot;+CLIENT+vbCrLf+&quot;DB：&quot;+DB_NAME+vbCrLf+&quot;TABLE：&quot;+TABLE_NAME]">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="233,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;無符合條件資料&quot;+vbCrLf+&quot;CLIENT：&quot;+CLIENT+vbCrLf+&quot;DB：&quot;+DB_NAME+vbCrLf+&quot;TABLE：&quot;+TABLE_NAME]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:MessageBox>
+                  </WriteLine>
+                  <FlowStep.Next>
+                    <FlowStep x:Name="__ReferenceID4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">10,514</av:Point>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MessageBox ChosenButton="{x:Null}" AutoCloseAfter="00:00:01" Caption="程式結束" DisplayName="無資料" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;MIGO 無符合條件資料&quot;+vbCrLf+&quot;CLIENT：&quot;+CLIENT+vbCrLf+&quot;DB：&quot;+DB_NAME+vbCrLf+&quot;TABLE：&quot;+TABLE_NAME]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:MessageBox>
+                    </FlowStep>
+                  </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
@@ -407,7 +426,7 @@
         <x:Reference>__ReferenceID5</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID10">
+    <FlowStep x:Name="__ReferenceID11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">220,104</av:Point>
@@ -441,5 +460,6 @@
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
   </Flowchart>
 </Activity>
