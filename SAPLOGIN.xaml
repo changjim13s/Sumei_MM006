@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>811.2,705.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>772.8,705.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>test_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -44,7 +44,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -64,6 +64,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="test" sap:VirtualizedContainerService.HintSize="375.2,640.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -75,7 +76,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ucas:Logon ConnectionName="[CONNT_NAME]" DelayBetweenRetries="5000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="333.6,139.2" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="2" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" Window="[SAP_WIND]">
+    <ucas:Logon ConnectionName="[CONNT_NAME]" ContinueOnError="True" DelayBetweenRetries="5000" DisplayName="SAP Logon" sap:VirtualizedContainerService.HintSize="333.6,139.2" sap2010:WorkflowViewState.IdRef="Logon_1" Retries="2" SAPLogonPath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" Window="[sapsession]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -85,7 +86,7 @@
     </ucas:Logon>
     <ucas:Login SecurePassword="{x:Null}" Client="[CLIENT]" DisplayName="SAP Login 'saplogon.exe  SAP'" sap:VirtualizedContainerService.HintSize="333.6,368.8" sap2010:WorkflowViewState.IdRef="Login_1" IsSecure="False" Language="ZF" MultiLogonOptionToChoose="Multiple" Password="[PASSWORD]" Timeout="5000" Username="[ID]" Window="[SAP_WIND]">
       <ucas:Login.Target>
-        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[SAP_WIND]" Id="fe6da483-fa92-4f65-9004-0c6240b878db" InformativeScreenshot="bf063e577ec22e071ee412baef99c21a">
+        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[sapsession]" Id="fe6da483-fa92-4f65-9004-0c6240b878db" InformativeScreenshot="bf063e577ec22e071ee412baef99c21a">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
