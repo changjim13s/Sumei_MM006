@@ -8138,15 +8138,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JMCG\\.nuget\\packages\\": {}
+    "C:\\Users\\chang\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Sumei_MM006",
       "projectName": "Sumei_MM006",
-      "projectPath": "C:\\Users\\JMCG\\Documents\\GitHub\\Sumei_MM006\\.local",
-      "packagesPath": "C:\\Users\\JMCG\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JMCG\\Documents\\GitHub\\Sumei_MM006\\.local"
+      "projectPath": "C:\\Users\\chang\\Documents\\GitHub\\Sumei_MM006_1\\.local",
+      "packagesPath": "C:\\Users\\chang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chang\\Documents\\GitHub\\Sumei_MM006_1\\.local"
     },
     "frameworks": {
       "net461": {
